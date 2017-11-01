@@ -13,6 +13,7 @@
 		C569871B1FA9713800D557BD /* ProjectJ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C56987191FA9713800D557BD /* ProjectJ.xcdatamodeld */; };
 		C569871D1FA9713800D557BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C569871C1FA9713800D557BD /* Assets.xcassets */; };
 		C56987201FA9713800D557BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C569871E1FA9713800D557BD /* LaunchScreen.storyboard */; };
+		C56987291FA9718600D557BD /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56987281FA9718600D557BD /* BiometricAuth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C569871C1FA9713800D557BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C569871F1FA9713800D557BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C56987211FA9713800D557BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C56987281FA9718600D557BD /* BiometricAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		C56987111FA9713800D557BD /* ProjectJ */ = {
 			isa = PBXGroup;
 			children = (
+				C56987271FA9717400D557BD /* Services */,
 				C56987121FA9713800D557BD /* AppDelegate.swift */,
 				C56987141FA9713800D557BD /* ViewController.swift */,
 				C56987161FA9713800D557BD /* Main.storyboard */,
@@ -65,6 +68,14 @@
 				C56987191FA9713800D557BD /* ProjectJ.xcdatamodeld */,
 			);
 			path = ProjectJ;
+			sourceTree = "<group>";
+		};
+		C56987271FA9717400D557BD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C56987281FA9718600D557BD /* BiometricAuth.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			files = (
 				C569871B1FA9713800D557BD /* ProjectJ.xcdatamodeld in Sources */,
 				C56987151FA9713800D557BD /* ViewController.swift in Sources */,
+				C56987291FA9718600D557BD /* BiometricAuth.swift in Sources */,
 				C56987131FA9713800D557BD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

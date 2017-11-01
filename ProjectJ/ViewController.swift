@@ -10,16 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+  @IBOutlet weak var label_authEnabled: UILabel!
+  @IBOutlet weak var textArea_AuthResponse: UITextView!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    label_authEnabled.text = "Auth: \(String(describing: BiometricAuth.enabled))"
+  }
+
+  @IBAction func toggleAuthEnabled(_ sender: Any) {
+    BiometricAuth.enabled ? BiometricAuth.disable() : BiometricAuth.enable()
+    label_authEnabled.text = "Auth: \(String(describing: BiometricAuth.enabled))"
+  }
+  
+  @IBAction func checkAuthorization(_ sender: Any) {
+    self.textArea_AuthResponse.text = ""
+    BiometricAuth.checkAuthorization() {
+      status in
+      self.textArea_AuthResponse.text = status.stringValue()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+  }
 }
 
